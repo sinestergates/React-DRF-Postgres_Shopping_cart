@@ -7,3 +7,4 @@ Frontend React, backend DRF
 
 SRC папка - React
 
+shopping_cart папка - Django rest framework
