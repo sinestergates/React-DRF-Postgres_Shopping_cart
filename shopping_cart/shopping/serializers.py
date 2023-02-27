@@ -7,7 +7,7 @@ class Product_serializer(serializers.ModelSerializer):
     class Meta:
         model = model.Product
         fields = '__all__'
-        depth = 1
+       
 
 class OrderProduct_serializer(serializers.ModelSerializer):
     class Meta:
