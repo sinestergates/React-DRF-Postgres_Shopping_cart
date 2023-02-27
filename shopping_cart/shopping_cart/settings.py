@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-la#c$zyccv*&k7$#ga4hogk!%aq(d3nav9g429$rsr^gb9#m2#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 CORS_ORIGIN_ALLOW_ALL = True
@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'shopping_cart.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'shopping',
-        'USER': 'alex',
-        'PASSWORD': '123',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': f'{os.environ['NAME']}',
+        'USER': f'{os.environ['USER']}',
+        'PASSWORD': f'{os.environ['PASSWORD']}',
+        'HOST': f'{os.environ['HOST']}',
+        'PORT': f'{os.environ['PORT']}',
     }
 }
 
@@ -131,7 +131,7 @@ USE_TZ = True
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
-print('BASE_DIR',BASE_DIR)
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATIC_DIR = os.path.join(BASE_DIR, 'static')
 STATICFILES_DIRS = [STATIC_DIR, ]
