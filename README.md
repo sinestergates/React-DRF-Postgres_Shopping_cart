@@ -5,6 +5,4 @@ Frontend React, backend DRF
 
 Админка Django логин sudo пароль 123
 
-SRC папка - React
-
 shopping_cart папка - Django rest framework
